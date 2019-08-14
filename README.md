@@ -87,3 +87,5 @@ When navigating from `ContentView` to `DetailsView` using a `NavigationLink`, `D
 ![View hierarchy when using NavigationLink](navigate.png)
 
 When displaying a modal sheet using `sheet(isPresented:content:)`, however, `DetailsView` will not become a child of `ContentView`. Instead, the hosting view will be instantiated in parallel to the originating view.
+
+![View hierarchy when using sheet(isPresented:content:)](modal.png)
