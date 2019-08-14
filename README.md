@@ -81,3 +81,9 @@ Instead, in order to present the details view as a modal, you have to pass the `
 ```
 
 Looking at the view hierarchy in the view debugger, we can see that thethis actually makes sense, as a modal screen is added to the view hierarchy **in parallel** to the original `ContentView`.
+
+When navigating from `ContentView` to `DetailsView` using a `NavigationLink`, `DetailsView` becomes a child of `ContentView`:
+
+![View hierarchy when using NavigationLink](navigate.png)
+
+When displaying a modal sheet using `sheet(isPresented:content:)`, however, `DetailsView` will not become a child of `ContentView`. Instead, the hosting view will be instantiated in parallel to the originating view.
