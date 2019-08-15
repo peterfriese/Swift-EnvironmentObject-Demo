@@ -2,9 +2,9 @@
 
 According to the SwiftUI documentation, `@EnvironmentObject` is _a dynamic view property that uses a bindable object supplied by an ancestor view to invalidate the current view whenever the bindable object changes_ ([source](https://developer.apple.com/documentation/swiftui/environmentobject)).
 
-Essentially, you can use it to manage access to global state. Hacking with Swift has a great article that explains the differences between `@State`, `@ObservableObject`, and `@EnvironmentObject`.
+Essentially, you can use it to manage access to global state. [Hacking with Swift has a [great article](https://www.hackingwithswift.com/quick-start/swiftui/whats-the-difference-between-objectbinding-state-and-environmentobject) that explains the differences between `@State`, `@ObservableObject`, and `@EnvironmentObject`.
 
-Particulalry, it says _There’s a third type of property available to use, which is `@EnvironmentObject`. This is a value that is made available to your views through the application itself – it’s shared data that every view can read if they want to._
+Particularly, it says _There’s a third type of property available to use, which is `@EnvironmentObject`. This is a value that is made available to your views through the application itself – it’s shared data that every view can read if they want to._
 
 It turns out, however, that while values put into the environment nicely percolate down the view hierarchy, this is not the case for modals.
 
